@@ -756,6 +756,14 @@ void tictactoe_developer_section()
        << "- Clean terminal interface\n"
        << "- Unicode symbol support\n";
 
+  cout << "\nDevelopers:\n\n"
+         << "1. Andrie Timothy R. Cabuguas\n"
+         << "- I don't die, I multiply\n\n"
+         << "2. Asdi V. Amamence\n"
+         <<" - I am a student of CTU-MAIN\n\n"
+         << "3. John Kennith A. Madera\n"
+         << "- I am a student of CTU-MAIN\n\n";
+
   terminal_pause("\nPress ENTER to go back to main menu...");
 }
 
@@ -796,4 +804,16 @@ void snake_and_ladder_game_menu()
 void snake_and_ladder_game() {}
 void print_snake_and_ladder_board() {}
 void snake_and_ladder_how_to_play() {}
-void snake_and_ladder_developer_section() {}
+void snake_and_ladder_developer_section() {
+   clear_screen();
+    
+    cout << "Developers:\n\n"
+         << "1. Andrie Timothy R. Cabuguas\n"
+         << "- I don't die, I multiply\n\n"
+         << "2. Asdi V. Amamence\n"
+         <<" - I am a student of CTU-MAIN\n\n"
+         << "3. John Kennith A. Madera\n"
+         << "- I am a student of CTU-MAIN\n\n";
+
+         terminal_pause("\nPress ENTER to go back to main menu...");
+}
