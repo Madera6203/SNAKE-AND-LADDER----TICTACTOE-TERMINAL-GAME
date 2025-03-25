@@ -388,11 +388,32 @@ void tictactoe_how_to_play(){
         tictactoe_game();
     }
     
-    terminal_pause("No instructions yet...");
-    
 }
 
 void tictactoe_developer_section(){
+
+		clear_screen();
+	char instruction_decision;
+	
+	cout <<"DEVELOPERS: \n" << endl;
+	cout <<"1. Andrie Timothy Cabuguas" << endl;
+	cout <<"2. Asdi V. Amamence" << endl;
+	cout <<"3. John Kennith A. Madera" << endl;
+
+
+ do{
+        cout << "\n\nPress [m] to go back to main menu �";
+        instruction_decision = _getch();
+
+        if(instruction_decision != 'm'){
+            cout << "\n\nInvalid Input, Just input [m]!" << endl;
+        }
+
+    }while(instruction_decision != 'm');
+
+    if(instruction_decision == 'm'){
+        tictactoe_game_menu();
+    }
 
 }
 
@@ -455,5 +476,27 @@ void snake_and_ladder_how_to_play(){
 }
 
 void snake_and_ladder_developer_section(){
+	clear_screen();
+	char instruction_decision;
+	
+	cout <<"DEVELOPERS: \n" << endl;
+	cout <<"1. Andrie Timothy Cabuguas" << endl;
+	cout <<"2. Asdi V. Amamence" << endl;
+	cout <<"3. John Kennith A. Madera" << endl;
+
+
+ do{
+        cout << "\n\nPress [m] to go back to main menu �";
+        instruction_decision = _getch();
+
+        if(instruction_decision != 'm'){
+            cout << "\n\nInvalid Input, Just input [m]!" << endl;
+        }
+
+    }while(instruction_decision != 'm');
+
+    if(instruction_decision == 'm'){
+       snake_and_ladder_game_menu();
+    }
 
 }
