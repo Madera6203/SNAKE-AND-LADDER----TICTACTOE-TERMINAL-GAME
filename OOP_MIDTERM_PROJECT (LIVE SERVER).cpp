@@ -30,6 +30,7 @@ void clear_screen();
 void cursor_hide();
 void cursor_show();
 void terminal_pause(const string &prompt);
+int mismatch_data();
 void delay(int milliseconds);
 int getch();
 
@@ -145,8 +146,6 @@ void cursor_show()
   cout << "\033[?25h";
 #endif
 }
-
-
 
 void terminal_pause(const string &prompt)
 {
@@ -503,22 +502,6 @@ void tictactoe_game(bool vsAI, bool hardMode)
     }
 
     clear_screen();
-    print_tictactoe_board(board_mark, player1_score, player2_score,
-    player1_name, player2_name);
-    char exit_decision, exit_decision_confirmation;
-
-    cout << "Press E [e] if you want end the game and go back to game menu if not just press any other key...";
-    exit_decision = _getch();
-
-    if(exit_decision == 'e'){
-      clear_screen();
-      cout << "Are you sure you want to EXIT? Press Y [y] if yes and if no press any other key";
-      exit_decision_confirmation = _getch();
-
-      if(exit_decision_confirmation == 'y'){
-        tictactoe_game_menu();
-      }
-    }
   }
 
   // Game over - determine winner
@@ -756,6 +739,14 @@ void tictactoe_developer_section()
        << "- Clean terminal interface\n"
        << "- Unicode symbol support\n";
 
+    cout << "\nDevelopers:\n\n"
+         << "1. Andrie Timothy R. Cabuguas\n"
+         << "- I don't die, I multiply\n\n"
+         << "2. Asdi V. Amamence\n"
+         <<" - I am a student of CTU-MAIN\n\n"
+         << "3. John Kennith A. Madera\n"
+         << "- I am a student of CTU-MAIN\n\n";
+
   terminal_pause("\nPress ENTER to go back to main menu...");
 }
 
@@ -796,4 +787,17 @@ void snake_and_ladder_game_menu()
 void snake_and_ladder_game() {}
 void print_snake_and_ladder_board() {}
 void snake_and_ladder_how_to_play() {}
-void snake_and_ladder_developer_section() {}
+
+void snake_and_ladder_developer_section() {
+    clear_screen();
+    
+    cout << "Developers:\n\n"
+         << "1. Andrie Timothy R. Cabuguas\n"
+         << "- I don't die, I multiply\n\n"
+         << "2. Asdi V. Amamence\n"
+         <<" - I am a student of CTU-MAIN\n\n"
+         << "3. John Kennith A. Madera\n"
+         << "- I am a student of CTU-MAIN\n\n";
+
+         terminal_pause("\nPress ENTER to go back to main menu...");
+}
