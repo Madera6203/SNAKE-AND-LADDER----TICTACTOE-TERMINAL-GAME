@@ -57,6 +57,7 @@ void print_table_boarder();
 void print_snake_and_ladder_board(string board_tile[]);
 void snake_and_ladder_how_to_play();
 void snake_and_ladder_developer_section();
+void print_big_DEVELOPERS();
 
 void delay(int milliseconds)
 {
@@ -745,19 +746,21 @@ void tictactoe_how_to_play()
 
 void tictactoe_developer_section()
 {
-  clear_screen();
-  cout << "*****************************************\n"
-       << "        TIC-TAC-TOE DEVELOPERS\n"
-       << "*****************************************\n"
-       << "\nThis game was developed as a C++ project.\n"
-       << "\nFeatures:\n"
-       << "- Cross-platform support (Windows/Linux)\n"
-       << "- Player vs Player mode\n"
-       << "- Player vs AI with two difficulty levels\n"
-       << "- Clean terminal interface\n"
-       << "- Unicode symbol support\n";
+	clear_screen();
+    print_big_DEVELOPERS();
+    cout <<"\n\n";
+    // Print the developer names
+	cout << "Andrie Timothy R. Cabuguas\n";
+	cout << "- Talk is cheap. Show me the code.\n\n";
+    cout << "Asdi V. Amamence\n";
+	cout << "- Computers are fast; developers keep them slow.\n\n";
+    cout << "John Kennith A. Madera\n";
+	cout << "- It's not a BUG, it's a FEATURE.\n\n";
+    cout << "Krisna Hojland\n";
+	cout << "- If debugging is the process of removing bugs, then programming must be the process of putting them in.\n";
 
-  terminal_pause("\nPress ENTER to go back to main menu...");
+
+	terminal_pause("\nPress ENTER to go back to main menu...");
 }
 
 // Snake and Ladder stubs (unchanged)
@@ -849,5 +852,70 @@ cin.clear();
 cin.get();
   
 }
-void snake_and_ladder_how_to_play() {}
-void snake_and_ladder_developer_section() {}
+void snake_and_ladder_how_to_play() {
+  clear_screen();
+  cout <<"OBJECTIVE OF THE GAME: \n\n";
+	  cout << "The objective of the game is to be the first player to reach the\n"
+		  "end of the board (square 100) by rolling a die\n and moving "
+		  "your game piece accordingly.\n\n";
+
+cout << "BASIC SET-UP:\n\n";
+	  cout << "1. The game is played on a board with numbered squares from 1 to "
+		  "100.\n";
+	  cout << "2. Each player has a game piece that starts at square 1.\n";
+	  cout << "3. Players take turns rolling a die to determine how many squares "
+		  "to move.\n\n";
+
+cout << "GAME PLAY:\n\n";
+	  cout << "1. On your turn, roll the die and move your game piece forward the "
+		  "number of squares rolled.\n";
+	  cout << "2. If you land on a square with the bottom of a ladder, you can "
+		  "climb up to the top of the ladder.\n";
+	  cout << "3. If you land on a square with the head of a snake, you must slide "
+		  "down to the tail of the snake.\n";
+	  cout << "4. The first player to reach square 100 wins the game.\n\n";
+
+cout << "WINNING THE GAME: \n\n";
+	  cout << "1. The first player to reach square 100 wins the game.\n";
+	  cout << "2. If a player rolls a number that would take them past square "
+		  "100, they must stay on their current square until they roll the exact number to land on the square 100.\n\n";
+cout << "ADDITIONAL RULES:\n\n";
+	  cout << "1. Each players have power ups or skills.\n";
+	  cout << "2. If a player use a skill it will cooldown for 6 rounds.\n";
+	  cout << "3. Players can choose which player will be affected of the skill he/she will use.\n\n";
+
+	  terminal_pause("Press ENTER to go back to main menu...");
+}
+void print_big_DEVELOPERS() {
+    string developers[] = {
+        "DDDD   EEEEE  V   V  EEEEE  L       OOO   PPPP   EEEEE  RRRR    SSSS",
+        "D   D  E      V   V  E      L      O   O  P   P  E      R   R  S    ",
+        "D   D  EEEE   V   V  EEEE   L      O   O  PPPP   EEEE   RRRR    SSS ",
+        "D   D  E      V   V  E      L      O   O  P      E      R  R      S  ",
+        "DDDD   EEEEE   VVV   EEEEE  LLLLL   OOO   P      EEEEE  R   R   SSSS",
+    };
+
+    // Print each row of letters for "DEVELOPERS"
+    for (int i = 0; i < 5; ++i) {
+        cout << developers[i] << endl;
+    }
+}
+
+// Developers information
+void snake_and_ladder_developer_section() {
+	clear_screen();
+    print_big_DEVELOPERS();
+    cout <<"\n\n";
+    // Print the developer names
+    cout << "Andrie Timothy R. Cabuguas\n";
+	cout << "- Talk is cheap. Show me the code.\n\n";
+    cout << "Asdi V. Amamence\n";
+	cout << "- Computers are fast; developers keep them slow.\n\n";
+    cout << "John Kennith A. Madera\n";
+	cout << "- It's not a BUG, it's a FEATURE.\n\n";
+    cout << "Krisna Hojland\n";
+	cout << "- If debugging is the process of removing bugs, then programming must be the process of putting them in.\n";
+
+
+	terminal_pause("\nPress ENTER to go back to main menu...");
+}
